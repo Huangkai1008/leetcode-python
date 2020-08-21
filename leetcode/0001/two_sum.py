@@ -47,8 +47,7 @@ class Solution2:
     def two_sum(nums: List[int], target: int) -> List[int]:
         d = dict()
         for index, num in enumerate(nums):
-            t = target - num
-            if t in d:
-                return [d[t], index]
+            if target - num in d:
+                return [d[target - num], index]
             d[num] = index
         return list()
