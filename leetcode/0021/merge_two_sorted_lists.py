@@ -29,6 +29,7 @@ class Solution1:
     * 空间复杂度: O(1)
 
     """
+
     @staticmethod
     def merge_two_lists(
         list1: Optional[ListNode], list2: Optional[ListNode]
