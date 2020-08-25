@@ -6,6 +6,8 @@ References:
 
 """
 
+from collections import deque
+
 
 class MyQueue:
     """双栈
@@ -39,3 +41,22 @@ class MyQueue:
 
     def empty(self) -> bool:
         return not self._in_stack
+
+
+class MyQueue1:
+    """使用Python的双端队列实现"""
+
+    def __init__(self):
+        self._stack = deque()
+
+    def push(self, x: int) -> None:
+        self._stack.append(x)
+
+    def pop(self) -> int:
+        return self._stack.popleft()
+
+    def peek(self) -> int:
+        return self._stack[0]
+
+    def empty(self) -> bool:
+        return not self._stack
